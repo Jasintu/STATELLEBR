@@ -38,43 +38,21 @@
         <div id="localimage"></div>
     </div>
     <div>
-        <div class="container">
-            <div id="customDropdown">
-                <input type="text" class="boxWriteState" placeholder="Estado, Território..." list="states" id="stateInput">
-                <div class="dropdownList">
-                    <option value="AC" class="brstate">Acre</option>
-                    <option value="AL" class="brstate">Alagoas</option>
-                    <option value="AP" class="brstate">Amapá</option>
-                    <option value="AM" class="brstate">Amazonas</option>
-                    <option value="BA" class="brstate">Bahia</option>
-                    <option value="CE" class="brstate">Ceará</option>
-                    <option value="DF" class="brstate">Distrito Federal</option>
-                    <option value="ES" class="brstate">Espírito Santo</option>
-                    <option value="GO" class="brstate">Goiás</option>
-                    <option value="MA" class="brstate">Maranhão</option>
-                    <option value="MT" class="brstate">Mato Grosso</option>
-                    <option value="MS" class="brstate">Mato Grosso do Sul</option>
-                    <option value="MG" class="brstate">Minas Gerais</option>
-                    <option value="PA" class="brstate">Pará</option>
-                    <option value="PB" class="brstate">Paraíba</option>
-                    <option value="PR" class="brstate">Paraná</option>
-                    <option value="PE" class="brstate">Pernambuco</option>
-                    <option value="PI" class="brstate">Piauí</option>
-                    <option value="RJ" class="brstate">Rio de Janeiro</option>
-                    <option value="RN" class="brstate">Rio Grande do Norte</option>
-                </div>
-            </div>
-            <canvas id="confetti-canvas"></canvas>
-            <button id="buttonSubmti"> 🌍 ADIVINHAR</button>
+        <div class="container" id="card1">
+            <input type="text" class="boxWriteState" placeholder="Estado, Território..." list="states" id="chance1">
+            <div id="buttonChance1"></div>
         </div>
-        <div class="container">
-            <div class="divlock">ADIVINHAR 1 / 4</div>
+        <div class="container" id="card2">
+            <div class="divlock" id="chance2">ADIVINHAR 1/ 4</div>
+            <div id="buttonChance2"></div>
         </div>
-        <div class="container">
-            <div class="divlock"></div>
+        <div class="container" id="card3">
+            <div class="divlock" id="chance3"></div>
+            <div id="buttonChance3"></div>
         </div>
-        <div class="container">
-            <div class="divlock"></div>
+        <div class="container" id="card4">
+            <div class="divlock" id="chance4"></div>
+            <div id="buttonChance4"></div>
         </div>
     </div>
     <div class="container">
@@ -94,9 +72,10 @@
             </div>
         </div>
     </div>
-
+    
+    <canvas id="confetti-canvas"></canvas>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scriptjs/hiddenstates.js"></script>
-    <script src="scriptjs/canva.js"></script>
+    <script src="scriptjs/opçoeslista.js"></script>
 </body>
 </html>
