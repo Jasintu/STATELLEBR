@@ -51,8 +51,8 @@ const statsterritory = {
     16: "territorios/Pernambuco.png",
     17: "territorios/Piauí.png",
     18: "territorios/RioGrandeNorte.png",
-    19: "territorios/RioGrandeSul.png",
-    20: "territorios/RioJaneiro.png",
+    19: "territorios/RioJaneiro.png",
+    20: "territorios/RioGrandeSul.png",
     21: "territorios/Rondônia.png",
     22: "territorios/Roraima.png",
     23: "territorios/SantaCatarina.png",
@@ -146,8 +146,6 @@ let nowCard = 1
 
 
 $(`#buttonChance1`).click(function(e){
-  console.log($(`#chance1`).val())
-
     let myVar = false
     
     for (let key in states) {
@@ -158,7 +156,6 @@ $(`#buttonChance1`).click(function(e){
     }
     
     if (myVar) {
-      console.log("tudo ok " + $(`#chance1`).val())
         if(resultStateToday === $(`#chance1`).val()){
 
           // efeito de confetti
@@ -168,53 +165,93 @@ $(`#buttonChance1`).click(function(e){
           createConfetti(buttonX, buttonY)
           animateConfetti()
 
+          $("#allChances").css({"display" : "none"})
+
+          $("#allChances").replaceWith(`<div class="container">
+          <div class="divlockNone">A RESPOSTA CORRETA ERA ${$("#chance1").val()} 
+          🎉</div>
+          </div>
+          <div class="container">
+          <div>
+          <a href="index.html"><button id="replayButton"> JOGAR NOVAMENTE <img src="icones/ICONREPLAY-removebg-preview.png" alt="" id="iconReplay"></button></a></div>
+          </div>`)
+
+          
+
         }else{
           $(`#card1`).insertAfter(`#card2`)
+          //PRIMEIRA CHANCE
+          
           restChance = restChance + 1
+          $("#chance2").replaceWith(`<div class="containerShow">
+          <div id="divShowState">${$("#chance1").val()} ❌</div>
+          </div>`)
+          $("#buttonChance2").replaceWith(`<div class="divlock"> ADIVINHAR 1 / 4</div>`)
+
           if(restChance == 3){
+            //SEGUNDA CHANCE
+
             $(`#card1`).insertAfter(`#card3`)
+            $("#chance3").replaceWith(`<div class="containerShow">
+            <div id="divShowState">${$("#chance1").val()} ❌</div>
+            </div>`)
+            $("#buttonChance3").replaceWith(`<div class="divlock"> ADIVINHAR 2 / 4</div>`)
+
+
           } else if(restChance == 4){
+            //TERCEIRA CHANCE
+
             $(`#card1`).insertAfter(`#card4`)
+            $("#chance4").replaceWith(`<div class="containerShow">
+            <div id="divShowState">${$("#chance1").val()} ❌</div>
+            </div>`)
+            $("#buttonChance4").replaceWith(`<div class="divlock"> ADIVINHAR 3 / 4</div>`)
+
           } else if (restChance >= 5){
-            alert("voce perdeu")
+            //QUARTA CHANCE
+
+            $(`#card1`).css({"display" : "none"})
+            $("#buttonChance1").css({"display" : "none"})
+
+            $("#finalResult").append(`<div class="containerShow">
+            <div id="divShowState">${$("#chance1").val()} ❌</div>
+            </div>`)
+            $("#finalResult").append(`<div class="divlock"> ADIVINHAR 4 / 4</div>`)
+
+            $("#chancesInScreen").replaceWith(`
+            <div class="container">
+            <div id="finalLoss">A resposta correta era ${resultStateToday}.</div>
+            </div>
+            `)
+            $("#allChances").append(`
+            <div class="container">
+            <div>
+            <a href="index.html"><button id="replayButton"> JOGAR NOVAMENTE <img src="icones/ICONREPLAY-removebg-preview.png" alt="" id="iconReplay"></button></a></div>
+            </div>`)
+            
           }
         }
-
     } else {
-      console.log("A variável não é igual a nenhum estado")
-      alert("Estado desconhecido!")
+      
+      setTimeout(function(){     
+        $("#containerErrorMsg").css({"display" : "flex"})
+        
+      },)
+
+      setTimeout(function(){
+
+        $("#containerErrorMsg").css({"animation" : "fadeInReverse 0.5s alternate"})
+        
+      }, 2000)
+      
+
+      setTimeout(function(){
+        
+        $("#containerErrorMsg").css({"display" : "none"})
+        $("#containerErrorMsg").css({"animation" : "fadeIn 0.5s alternate"})
+
+      }, 500)
+
     }
 })
-
-/*<         <div id="customDropdown">
-                <input type="text" class="boxWriteState" placeholder="Estado, Território..." list="states" id="chance1">
-                <div class="dropdownList">
-                    <option value="AC" class="brstate">Acre</option>
-                    <option value="AL" class="brstate">Alagoas</option>
-                    <option value="AP" class="brstate">Amapá</option>
-                    <option value="AM" class="brstate">Amazonas</option>
-                    <option value="BA" class="brstate">Bahia</option>
-                    <option value="CE" class="brstate">Ceará</option>
-                    <option value="DF" class="brstate">Distrito Federal</option>
-                    <option value="ES" class="brstate">Espírito Santo</option>
-                    <option value="GO" class="brstate">Goiás</option>
-                    <option value="MA" class="brstate">Maranhão</option>
-                    <option value="MT" class="brstate">Mato Grosso</option>
-                    <option value="MS" class="brstate">Mato Grosso do Sul</option>
-                    <option value="MG" class="brstate">Minas Gerais</option>
-                    <option value="PA" class="brstate">Pará</option>
-                    <option value="PB" class="brstate">Paraíba</option>
-                    <option value="PR" class="brstate">Paraná</option>
-                    <option value="PE" class="brstate">Pernambuco</option>
-                    <option value="PI" class="brstate">Piauí</option>
-                    <option value="RJ" class="brstate">Rio de Janeiro</option>
-                    <option value="RN" class="brstate">Rio Grande do Norte</option>
-                </div>
-            </div>
-
-
-
-
-<button id="buttonSubmti"> 🌍 ADIVINHAR</button>
-*/
 

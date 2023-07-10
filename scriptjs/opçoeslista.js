@@ -1,6 +1,6 @@
 "use strict"
 
-$("#buttonChance1").append('<button id="buttonChance1"> 🌍 ADIVINHAR</button>')
+$("#buttonChance1").append('<button id="buttonChance1" class="removeBug"> 🌍 ADIVINHAR</button>')
 $("#chance1").append(`<div id="customDropdown">
 <input type="text" class="boxWriteState" placeholder="Estado, Território..." list="states" id="chance1">
 <div class="dropdownList">

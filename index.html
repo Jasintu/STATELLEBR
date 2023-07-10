@@ -28,6 +28,13 @@
             </div>
         </div>
     </header>
+    <div id="containerErrorMsg">
+        <div id="containermsg">
+            <div id="sirene">❌</div>
+        Estado desconhecido!
+        <div id="x">X</div>
+    </div>
+    </div>
     <div class="container">
         <div>
             <div class="string"></div>
@@ -37,23 +44,25 @@
     <div class="container">
         <div id="localimage"></div>
     </div>
-    <div>
+    <div id="allChances">
         <div class="container" id="card1">
             <input type="text" class="boxWriteState" placeholder="Estado, Território..." list="states" id="chance1">
             <div id="buttonChance1"></div>
         </div>
         <div class="container" id="card2">
-            <div class="divlock" id="chance2">ADIVINHAR 1/ 4</div>
+            <div class="divlockNone" id="chance2">ADIVINHAR 1/ 4</div>
             <div id="buttonChance2"></div>
         </div>
         <div class="container" id="card3">
-            <div class="divlock" id="chance3"></div>
+            <div class="divlockNone" id="chance3"></div>
             <div id="buttonChance3"></div>
         </div>
         <div class="container" id="card4">
-            <div class="divlock" id="chance4"></div>
+            <div class="divlockNone" id="chance4"></div>
             <div id="buttonChance4"></div>
         </div>
+        <div class="container" id="finalResult"></div>
+        <div id="chancesInScreen"></div>
     </div>
     <div class="container">
         <div>
@@ -70,9 +79,20 @@
                     <p>Você deve acertar o estado corretamente pelo seu território para ir para próxima rodada.</p>
                 </details>
             </div>
+            <div>
+                <details>
+                    <summary>Porque apenas é aceito estados em maiusculo?</summary>
+                    <p>Para melhor funcionamento do script evitando problemas de informações passadas!</p>
+                </details>
+            </div>
+            <div>
+                <details>
+                    <summary>Como sei se acertei?</summary>
+                    <p>Caso voce acerte corretamente seu botão se transformara em confetes com um 🎉 e caso erre sera exibido um ❌.</p>
+                </details>
+            </div>
         </div>
     </div>
-    
     <canvas id="confetti-canvas"></canvas>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scriptjs/hiddenstates.js"></script>
