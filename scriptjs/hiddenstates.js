@@ -242,7 +242,7 @@ $(`#buttonChance1`).click(function(e){
 
         $("#containerErrorMsg").css({"animation" : "fadeInReverse 0.5s alternate"})
         
-      }, 2000)
+      }, 500)
       
 
       setTimeout(function(){
@@ -250,7 +250,7 @@ $(`#buttonChance1`).click(function(e){
         $("#containerErrorMsg").css({"display" : "none"})
         $("#containerErrorMsg").css({"animation" : "fadeIn 0.5s alternate"})
 
-      }, 500)
+      }, 1000)
 
     }
 })

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Climate+Crisis&family=Noto+Sans+JP:wght@100&family=Ubuntu:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <noscript>Você precisa ativar o Javascript neste site para usá-lo.</noscript>
@@ -46,8 +47,10 @@
     </div>
     <div id="allChances">
         <div class="container" id="card1">
-            <input type="text" class="boxWriteState" placeholder="Estado, Território..." list="states" id="chance1">
-            <div id="buttonChance1"></div>
+            <div id="customDropdown">
+                <input type="text" class="boxWriteState dropdownList" placeholder="Estado, Território..." list="statesL" id="chance1">
+                </div>
+                <button id="buttonChance1" class="removeBug"> 🌍 ADIVINHAR</button>
         </div>
         <div class="container" id="card2">
             <div class="divlockNone" id="chance2">ADIVINHAR 1/ 4</div>
@@ -63,6 +66,37 @@
         </div>
         <div class="container" id="finalResult"></div>
         <div id="chancesInScreen"></div>
+    </div>
+    <div class="states">
+        <datalist id="statesL">
+            <option value="ACRE">ACRE</option>
+            <option value="ALAGOAS">ALAGOAS</option>
+            <option value="AMAPÁ">AMAPÁ</option>
+            <option value="AMAZONAS">AMAZONAS</option>
+            <option value="BAHIA">BAHIA</option>
+            <option value="CEARÁ">CEARÁ</option>
+            <option value="DISTRITO FEDERAL">DISTRITO FEDERAL</option>
+            <option value="ESPÍRITO SANTO">ESPÍRITO SANTO</option>
+            <option value="GOIÁS">GOIÁS</option>
+            <option value="MARANHÃO">MARANHÃO</option>
+            <option value="MATO GROSSO">MATO GROSSO</option>
+            <option value="MATO GROSSO DO SUL">MATO GROSSO DO SUL</option>
+            <option value="MINAS GERAIS">MINAS GERAIS</option>
+            <option value="PARÁ">PARÁ</option>
+            <option value="PARAÍBA">PARAÍBA</option>
+            <option value="PARANÁ">PARANÁ</option>
+            <option value="PERNAMBUCO">PERNAMBUCO</option>
+            <option value="PIAUÍ">PIAUÍ</option>
+            <option value="RIO DE JANEIRO">RIO DE JANEIRO</option>
+            <option value="RIO GRANDE DO NORTE">RIO GRANDE DO NORTE</option>
+            <option value="RIO GRANDE DO SUL">RIO GRANDE DO SUL</option>
+            <option value="RONDÔNIA">RONDÔNIA</option>
+            <option value="RORAIMA">RORAIMA</option>
+            <option value="SANTA CATARINA">SANTA CATARINA</option>
+            <option value="SÃO PAULO">SÃO PAULO</option>
+            <option value="SERGIPE">SERGIPE</option>
+            <option value="TOCANTINS">TOCANTINS</option>
+        </datalist>
     </div>
     <div class="container">
         <div>
@@ -94,8 +128,14 @@
         </div>
     </div>
     <canvas id="confetti-canvas"></canvas>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scriptjs/hiddenstates.js"></script>
     <script src="scriptjs/opçoeslista.js"></script>
+    <script>
+        $(document).ready(function() {
+          $('#statesL').select2();
+        });
+    </script>
 </body>
 </html>

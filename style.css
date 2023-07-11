@@ -119,33 +119,15 @@ button{
 }
 /*vizualizaçao da lista de estados*/
 
-  
-.dropdownList {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #101729;
-    border: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-    color: rgb(212, 211, 210);
-    border-top: none;
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: none;
-    z-index: 1;
-    transform: scaleX(97%);
-}
-
-#customDropdown .dropdownList option {
+#statesL option {
+    background-color: #1d253b;
+    color: #000000;
     padding: 5px;
-    font-size: 14px;
-    cursor: pointer;
-}
+  }
   
-#customDropdown:focus-within .dropdownList {
-    display: block;
-}
+  #statesL option:hover {
+    background-color: #ddd;
+  }
 
 .brstate:hover{
     color: aliceblue;
@@ -378,3 +360,6 @@ summary::after {
     0% { opacity: 1; }
     100% { opacity: 0; }
 }
+
+/*select2 css*/
+
