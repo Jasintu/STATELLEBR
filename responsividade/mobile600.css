@@ -20,7 +20,20 @@
         font-size: medium;
     }
 
+    .divlock{
+        font-size: medium;
+    }
+
     #replayButton{
         height: 35px;
+    }
+
+    #divShowState{
+        width: 100px;
+    }
+
+    .containerShow{
+        margin-left: 0px;
+        justify-content: end;
     }
 }

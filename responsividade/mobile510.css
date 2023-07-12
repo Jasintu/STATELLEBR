@@ -21,7 +21,17 @@
         width: 379px;
     }
 
+    .divlock{
+        font-size: small;
+        width: 220px;
+    }
+
     #replayButton{
         height: 35px;
+    }
+
+    .containerShow{
+        width: 102px;
+        justify-content: end;
     }
 }
