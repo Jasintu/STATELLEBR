@@ -21,9 +21,15 @@
         width: 379px;
     }
 
+    #divShowState{
+        width: 400px;
+        
+        justify-content: end;
+    }
+
     .divlock{
         font-size: small;
-        width: 220px;
+        width: 150px;
     }
 
     #replayButton{
@@ -31,7 +37,7 @@
     }
 
     .containerShow{
-        width: 102px;
+        width: 230px;
         justify-content: end;
     }
 }

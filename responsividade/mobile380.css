@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 380px) {
 
     body{
 
@@ -23,5 +23,9 @@
 
     #replayButton{
         height: 35px;
+    }
+
+    .divlock{
+        font-size: x-small;
     }
 }

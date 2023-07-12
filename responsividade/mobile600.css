@@ -13,7 +13,7 @@
     }
 
     #chance1{
-        width: 230px;
+        width: 10px;
     }
 
     .divlockNone{
@@ -22,6 +22,7 @@
 
     .divlock{
         font-size: medium;
+        width: 260px;
     }
 
     #replayButton{
@@ -29,10 +30,11 @@
     }
 
     #divShowState{
-        width: 100px;
+        width: 130px;
     }
 
     .containerShow{
+        white-space: nowrap;
         margin-left: 0px;
         justify-content: end;
     }
