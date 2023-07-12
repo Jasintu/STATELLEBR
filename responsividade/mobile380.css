@@ -1,4 +1,4 @@
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 385px) {
 
     body{
 
@@ -17,8 +17,9 @@
     }
 
     .divlockNone{
-        font-size: medium;
+        font-size: small;
         width: 319px;
+        white-space: nowrap;
     }
 
     #replayButton{
