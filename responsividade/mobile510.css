@@ -1,0 +1,27 @@
+@media screen and (max-width: 600px) {
+
+    body{
+
+
+    }
+
+    #buttonChance1{
+        height: 36px;
+        width: 140px;
+        font-size: x-small;
+        white-space: nowrap;
+    }
+
+    #chance1{
+        width: 230px;
+    }
+
+    .divlockNone{
+        font-size: medium;
+        width: 379px;
+    }
+
+    #replayButton{
+        height: 35px;
+    }
+}
